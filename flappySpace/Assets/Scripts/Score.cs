@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Score : MonoBehaviour
 {
@@ -15,6 +16,6 @@ public class Score : MonoBehaviour
     // each time a player gets +1 score it changes it to sctring type 
     void Update()
     {
-        GetComponent<UnityEngine.UI.Text>().text = score.ToString();
+        GetComponent<TMP_Text>().text = score.ToString();
     }
 }
