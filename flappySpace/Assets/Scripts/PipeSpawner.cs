@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PipeSpawner : MonoBehaviour
 {
+    [Header("Pipe Spawner Settings")]
     public float spawnTime;
     private float timer = 0;
     public GameObject pipe;
@@ -14,7 +15,7 @@ public class PipeSpawner : MonoBehaviour
         
     }
 
-    // Update is called once per frame
+    // spawns new pipe walls with minor differences in height position each time
     void Update()
     {
         if(timer > spawnTime)

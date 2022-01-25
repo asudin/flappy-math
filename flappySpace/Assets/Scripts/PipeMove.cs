@@ -12,7 +12,7 @@ public class PipeMove : MonoBehaviour
         
     }
 
-    // Update is called once per frame
+    // moves the objects
     void Update()
     {
         transform.position += Vector3.left * speed * Time.deltaTime;

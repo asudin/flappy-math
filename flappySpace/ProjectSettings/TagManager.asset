@@ -5,7 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - problem
-  - answer
+  - pipewalls
+  - gamemanager
+  - botAnswer
+  - topAnswer
   layers:
   - Default
   - TransparentFX

@@ -13,6 +13,7 @@ public class MathProblem : MonoBehaviour
         PrintProblem();
     }
 
+    // prints the equation problem before the wall objects
     public void PrintProblem()
     {
         switch (equation)
@@ -35,6 +36,8 @@ public class MathProblem : MonoBehaviour
                 break;
         }
     }
+
+    // randomly produces an equation 
     public int GetProblem()
     {
         int problem = 0;
@@ -45,17 +48,7 @@ public class MathProblem : MonoBehaviour
                 problem = numberA + numberB;
                 break;
             case 2:
-                if (numberA > numberB)
-                {
-                    problem = numberA - numberB;
-                }
-                else if (numberA < numberB)
-                {
-                    int numberC = numberB;
-                    numberA = numberB;
-                    numberB = numberC;
-                    problem = numberA - numberB;
-                }
+                problem = numberA - numberB;
                 break;
             default:
                 problem = 999;
@@ -64,9 +57,11 @@ public class MathProblem : MonoBehaviour
         Debug.Log($"this is the problem: {problem}");
         return problem;
     }
+
+    // randomizes the numbers
     public void GenerateRandomNumber()
     {
-        Debug.Log($"erorr in GenNumb");
+        Debug.Log($"our random numbers");
         numberA = Random.Range(1, 20);
         numberB = Random.Range(1, 20);
         equation = Random.Range(1, 3);
