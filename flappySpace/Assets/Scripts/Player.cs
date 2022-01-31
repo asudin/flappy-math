@@ -32,8 +32,8 @@ public class Player : MonoBehaviour
     }
 
     // show game over screen if player is outside of screen resolution
-    private void OnBecameInvisible()
-    {
-        GameManager.GameOver();
-    }
+    //private void OnBecameInvisible()
+    //{
+    //    GameManager.GameOver();
+    //}
 }
