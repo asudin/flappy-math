@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     [Header("Game Manager Settings")]
     public GameObject DeathScreen;
+    public GameObject StartScreen;
 
     void Start()
     {
@@ -20,8 +21,19 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
     }
 
+    public void MainMenu()
+    {
+        StartScreen.SetActive(true);
+        Time.timeScale = 0;
+    }
+
     public void Replay()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene(1);
     }
 }

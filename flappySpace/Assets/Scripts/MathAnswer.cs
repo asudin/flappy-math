@@ -10,6 +10,7 @@ public class MathAnswer : MonoBehaviour
     MathProblem answer;
 
     private int solution, answerHolder, answerDif, subDiv;
+    //private GameObject topAnswer = GameObject.FindGameObjectWithTag("topAnswer");
 
     private void Awake()
     {
@@ -43,47 +44,47 @@ public class MathAnswer : MonoBehaviour
                 switch (subDiv)
                 {
                     case 1:
-                        GameObject.FindGameObjectWithTag("topAnswer").GetComponent<TextMesh>().text = solution.ToString();
+                        answerFieldTop.GetComponent<TextMesh>().text = solution.ToString();
                         
-                        solution = solution + subDiv;
-                        GameObject.FindGameObjectWithTag("botAnswer").GetComponent<TextMesh>().text = solution.ToString();
-                        GameObject.FindGameObjectWithTag("botAnswer").GetComponent<Collider2D>().isTrigger = false;
+                        solution = solution + answerDif;
+                        answerFieldBot.GetComponent<TextMesh>().text = solution.ToString();
+                        answerFieldTop.GetComponent<Collider2D>().isTrigger = false;
 
                         Debug.Log($"BINGO: {solution}");
                         break;
                     case 2:
-                        GameObject.FindGameObjectWithTag("topAnswer").GetComponent<TextMesh>().text = solution.ToString();
+                        answerFieldTop.GetComponent<TextMesh>().text = solution.ToString();
 
-                        solution = solution - subDiv;
-                        GameObject.FindGameObjectWithTag("botAnswer").GetComponent<TextMesh>().text = solution.ToString();
-                        GameObject.FindGameObjectWithTag("botAnswer").GetComponent<Collider2D>().isTrigger = false;
+                        solution = solution - answerDif;
+                        answerFieldBot.GetComponent<TextMesh>().text = solution.ToString();
+                        answerFieldBot.GetComponent<Collider2D>().isTrigger = false;
 
                         Debug.Log($"BINGO: {solution}");
                         break;
                     case 3:
-                        GameObject.FindGameObjectWithTag("topAnswer").GetComponent<TextMesh>().text = solution.ToString();
+                        answerFieldTop.GetComponent<TextMesh>().text = solution.ToString();
 
-                        solution = solution + subDiv;
-                        GameObject.FindGameObjectWithTag("botAnswer").GetComponent<TextMesh>().text = solution.ToString();
-                        GameObject.FindGameObjectWithTag("botAnswer").GetComponent<Collider2D>().isTrigger = false;
+                        solution = solution + answerDif;
+                        answerFieldBot.GetComponent<TextMesh>().text = solution.ToString();
+                        answerFieldBot.GetComponent<Collider2D>().isTrigger = false;
 
                         Debug.Log($"BINGO: {solution}");
                         break;
                     case 4:
-                        GameObject.FindGameObjectWithTag("topAnswer").GetComponent<TextMesh>().text = solution.ToString();
+                        answerFieldTop.GetComponent<TextMesh>().text = solution.ToString();
 
-                        solution = solution - subDiv;
-                        GameObject.FindGameObjectWithTag("botAnswer").GetComponent<TextMesh>().text = solution.ToString();
-                        GameObject.FindGameObjectWithTag("botAnswer").GetComponent<Collider2D>().isTrigger = false;
+                        solution = solution - answerDif;
+                        answerFieldBot.GetComponent<TextMesh>().text = solution.ToString();
+                        answerFieldBot.GetComponent<Collider2D>().isTrigger = false;
 
                         Debug.Log($"BINGO: {solution}");
                         break;
-                    default:                    
-                        GameObject.FindGameObjectWithTag("topAnswer").GetComponent<TextMesh>().text = solution.ToString();
+                    default:
+                        answerFieldTop.GetComponent<TextMesh>().text = solution.ToString();
 
-                        solution = solution - subDiv;
-                        GameObject.FindGameObjectWithTag("botAnswer").GetComponent<TextMesh>().text = solution.ToString();
-                        GameObject.FindGameObjectWithTag("botAnswer").GetComponent<Collider2D>().isTrigger = false;
+                        solution = solution - answerDif;
+                        answerFieldBot.GetComponent<TextMesh>().text = solution.ToString();
+                        answerFieldBot.GetComponent<Collider2D>().isTrigger = false;
 
                         Debug.Log($"BINGO: {solution}");
                         break;
@@ -97,47 +98,47 @@ public class MathAnswer : MonoBehaviour
                 switch (subDiv)
                 {
                     case 1:
-                        GameObject.FindGameObjectWithTag("botAnswer").GetComponent<TextMesh>().text = solution.ToString();
+                        answerFieldTop.GetComponent<TextMesh>().text = solution.ToString();
 
-                        solution = solution + subDiv;
-                        GameObject.FindGameObjectWithTag("topAnswer").GetComponent<TextMesh>().text = solution.ToString();
-                        GameObject.FindGameObjectWithTag("topAnswer").GetComponent<Collider2D>().isTrigger = false;
+                        solution = solution + answerDif;
+                        answerFieldBot.GetComponent<TextMesh>().text = solution.ToString();
+                        answerFieldBot.GetComponent<Collider2D>().isTrigger = false;
 
                         Debug.Log($"BINGO: {solution}");
                         break;
                     case 2:
-                        GameObject.FindGameObjectWithTag("botAnswer").GetComponent<TextMesh>().text = solution.ToString();
+                        answerFieldTop.GetComponent<TextMesh>().text = solution.ToString();
 
-                        solution = solution - subDiv;
-                        GameObject.FindGameObjectWithTag("topAnswer").GetComponent<TextMesh>().text = solution.ToString();
-                        GameObject.FindGameObjectWithTag("topAnswer").GetComponent<Collider2D>().isTrigger = false;
+                        solution = solution - answerDif;
+                        answerFieldBot.GetComponent<TextMesh>().text = solution.ToString();
+                        answerFieldBot.GetComponent<Collider2D>().isTrigger = false;
 
                         Debug.Log($"BINGO: {solution}");
                         break;
                     case 3:
-                        GameObject.FindGameObjectWithTag("botAnswer").GetComponent<TextMesh>().text = solution.ToString();
+                        answerFieldTop.GetComponent<TextMesh>().text = solution.ToString();
 
-                        solution = solution + subDiv;
-                        GameObject.FindGameObjectWithTag("topAnswer").GetComponent<TextMesh>().text = solution.ToString();
-                        GameObject.FindGameObjectWithTag("topAnswer").GetComponent<Collider2D>().isTrigger = false;
+                        solution = solution + answerDif;
+                        answerFieldBot.GetComponent<TextMesh>().text = solution.ToString();
+                        answerFieldBot.GetComponent<Collider2D>().isTrigger = false;
 
                         Debug.Log($"BINGO: {solution}");
                         break;
                     case 4:
-                        GameObject.FindGameObjectWithTag("botAnswer").GetComponent<TextMesh>().text = solution.ToString();
+                        answerFieldTop.GetComponent<TextMesh>().text = solution.ToString();
 
-                        solution = solution - subDiv;
-                        GameObject.FindGameObjectWithTag("topAnswer").GetComponent<TextMesh>().text = solution.ToString();
-                        GameObject.FindGameObjectWithTag("topAnswer").GetComponent<Collider2D>().isTrigger = false;
+                        solution = solution - answerDif;
+                        answerFieldBot.GetComponent<TextMesh>().text = solution.ToString();
+                        answerFieldBot.GetComponent<Collider2D>().isTrigger = false;
 
                         Debug.Log($"BINGO: {solution}");
                         break;
                     default:
-                        GameObject.FindGameObjectWithTag("botAnswer").GetComponent<TextMesh>().text = solution.ToString();
+                        answerFieldTop.GetComponent<TextMesh>().text = solution.ToString();
 
-                        solution = solution - subDiv;
-                        GameObject.FindGameObjectWithTag("topAnswer").GetComponent<TextMesh>().text = solution.ToString();
-                        GameObject.FindGameObjectWithTag("topAnswer").GetComponent<Collider2D>().isTrigger = false;
+                        solution = solution - answerDif;
+                        answerFieldBot.GetComponent<TextMesh>().text = solution.ToString();
+                        answerFieldBot.GetComponent<Collider2D>().isTrigger = false;
 
                         Debug.Log($"BINGO: {solution}");
                         break;
@@ -151,47 +152,47 @@ public class MathAnswer : MonoBehaviour
                 switch (subDiv)
                 {
                     case 1:
-                        GameObject.FindGameObjectWithTag("topAnswer").GetComponent<TextMesh>().text = solution.ToString();
+                        answerFieldTop.GetComponent<TextMesh>().text = solution.ToString();
 
-                        solution = solution + subDiv;
-                        GameObject.FindGameObjectWithTag("botAnswer").GetComponent<TextMesh>().text = solution.ToString();
-                        GameObject.FindGameObjectWithTag("botAnswer").GetComponent<Collider2D>().isTrigger = false;
+                        solution = solution + answerDif;
+                        answerFieldBot.GetComponent<TextMesh>().text = solution.ToString();
+                        answerFieldBot.GetComponent<Collider2D>().isTrigger = false;
 
                         Debug.Log($"BINGO: {solution}");
                         break;
                     case 2:
-                        GameObject.FindGameObjectWithTag("topAnswer").GetComponent<TextMesh>().text = solution.ToString();
+                        answerFieldTop.GetComponent<TextMesh>().text = solution.ToString();
 
-                        solution = solution - subDiv;
-                        GameObject.FindGameObjectWithTag("botAnswer").GetComponent<TextMesh>().text = solution.ToString();
-                        GameObject.FindGameObjectWithTag("botAnswer").GetComponent<Collider2D>().isTrigger = false;
+                        solution = solution - answerDif;
+                        answerFieldBot.GetComponent<TextMesh>().text = solution.ToString();
+                        answerFieldBot.GetComponent<Collider2D>().isTrigger = false;
 
                         Debug.Log($"BINGO: {solution}");
                         break;
                     case 3:
-                        GameObject.FindGameObjectWithTag("topAnswer").GetComponent<TextMesh>().text = solution.ToString();
+                        answerFieldTop.GetComponent<TextMesh>().text = solution.ToString();
 
-                        solution = solution + subDiv;
-                        GameObject.FindGameObjectWithTag("botAnswer").GetComponent<TextMesh>().text = solution.ToString();
-                        GameObject.FindGameObjectWithTag("botAnswer").GetComponent<Collider2D>().isTrigger = false;
+                        solution = solution + answerDif;
+                        answerFieldBot.GetComponent<TextMesh>().text = solution.ToString();
+                        answerFieldBot.GetComponent<Collider2D>().isTrigger = false;
 
                         Debug.Log($"BINGO: {solution}");
                         break;
                     case 4:
-                        GameObject.FindGameObjectWithTag("topAnswer").GetComponent<TextMesh>().text = solution.ToString();
+                        answerFieldTop.GetComponent<TextMesh>().text = solution.ToString();
 
-                        solution = solution - subDiv;
-                        GameObject.FindGameObjectWithTag("botAnswer").GetComponent<TextMesh>().text = solution.ToString();
-                        GameObject.FindGameObjectWithTag("botAnswer").GetComponent<Collider2D>().isTrigger = false;
+                        solution = solution - answerDif;
+                        answerFieldBot.GetComponent<TextMesh>().text = solution.ToString();
+                        answerFieldBot.GetComponent<Collider2D>().isTrigger = false;
 
                         Debug.Log($"BINGO: {solution}");
                         break;
                     default:
-                        GameObject.FindGameObjectWithTag("topAnswer").GetComponent<TextMesh>().text = solution.ToString();
+                        answerFieldTop.GetComponent<TextMesh>().text = solution.ToString();
 
-                        solution = solution - subDiv;
-                        GameObject.FindGameObjectWithTag("botAnswer").GetComponent<TextMesh>().text = solution.ToString();
-                        GameObject.FindGameObjectWithTag("botAnswer").GetComponent<Collider2D>().isTrigger = false;
+                        solution = solution - answerDif;
+                        answerFieldBot.GetComponent<TextMesh>().text = solution.ToString();
+                        answerFieldBot.GetComponent<Collider2D>().isTrigger = false;
 
                         Debug.Log($"BINGO: {solution}");
                         break;
