@@ -1,17 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PipeMove : MonoBehaviour
 {
     [Header("Move Settings")]
-    public float speed = 2;
-    private float score = Score.score;
+    [SerializeField, Range(1, 10)] private float speed = 2f;
 
-    void Start()
-    {
-        
-    }
+    private float score = Score.score;
 
     // moves the objects
     void Update()

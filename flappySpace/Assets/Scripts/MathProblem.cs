@@ -1,11 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class MathProblem : MonoBehaviour
 {
-    private int numberA, numberB, equation;
+    private int numberA, numberB, equation, problem;
 
     public void Start()
     {
@@ -40,7 +37,6 @@ public class MathProblem : MonoBehaviour
     // randomly produces an equation 
     public int GetProblem()
     {
-        int problem = 0;
         Debug.Log($"this is the case number: {equation}");
         switch (equation)
         {
@@ -51,7 +47,7 @@ public class MathProblem : MonoBehaviour
                 problem = numberA - numberB;
                 break;
             default:
-                problem = 999;
+                problem = numberA + numberB;
                 break;
         }
         Debug.Log($"this is the problem: {problem}");

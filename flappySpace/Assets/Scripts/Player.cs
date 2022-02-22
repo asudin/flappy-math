@@ -1,12 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
     [Header("Player Settings")]
-    public float velocity;
-    public float speed = 2;
+    [SerializeField, Range(1, 10)] private float jumpVelocity = 4f;
+    [SerializeField, Range(1, 10)] private float speed = 2f;
+
     private Rigidbody2D rb;
 
     //public GameObject effect;
@@ -20,17 +19,12 @@ public class Player : MonoBehaviour
     // Jump mechanic
     void Update()
     {
+        //transform.position += Vector3.right * speed * Time.deltaTime;
+
         if (Input.GetMouseButton(0))
         {
-            rb.velocity = Vector2.up * velocity;
-            //rb.velocity += Vector2.right * speed * Time.deltaTime;
-            //Instantiate(effect, transform.position, Quaternion.identity);
+            rb.velocity = Vector2.up * jumpVelocity;
         }
-
-        //if (Score.score >= 200)
-        //{
-        //    rb.velocity += Vector2.right * (speed * 2) * Time.deltaTime;
-        //}
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -39,8 +33,8 @@ public class Player : MonoBehaviour
     }
 
     // show game over screen if player is outside of screen resolution
-     void OnBecameInvisible()
+    void OnBecameInvisible()
     {
-        GameManager.GameOver();
+        //GameManager.GameOver();
     }
 }

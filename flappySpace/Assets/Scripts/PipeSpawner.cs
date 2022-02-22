@@ -1,25 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PipeSpawner : MonoBehaviour
 {
     [Header("Pipe Spawner Settings")]
-    public float spawnTime = 8;
+    [SerializeField, Range(1, 10)] private float spawnTime = 8;
+    [SerializeField, Range(1, 10)] private float spawnHeight;
     private float timer = 0;
-    public GameObject pipe;
-    public float spawnHeight;
-    private float score = Score.score;
 
-    void Start()
-    {
-        
-    }
+    public GameObject pipe;
 
     // spawns new pipe walls with minor differences in height position each time
     void Update()
     {
-        if(timer > spawnTime)
+        if (timer > spawnTime)
         {
             GameObject newpipe = Instantiate(pipe);
             newpipe.transform.position = transform.position + new Vector3(0, Random.Range(-spawnHeight, spawnHeight), 0);
