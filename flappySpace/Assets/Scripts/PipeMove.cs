@@ -3,7 +3,7 @@ using UnityEngine;
 public class PipeMove : MonoBehaviour
 {
     [Header("Move Settings")]
-    [SerializeField, Range(1, 10)] private float speed = 2f;
+    [SerializeField, Range(1, 10)] private float speed = 1f;
 
     private float score = Score.score;
 
@@ -15,23 +15,23 @@ public class PipeMove : MonoBehaviour
         switch (score)
         {
             case 40:
-                speed = 2.5f;
+                speed = 1.5f;
                 break;
 
             case 80:
-                speed = 2.8f;
+                speed = 1.8f;
                 break;
 
             case 110:
-                speed = 2;
+                speed = 1.1f;
                 break;
 
             case 160:
-                speed = 3.2f;
+                speed = 2.2f;
                 break;
 
             case 220:
-                speed = 4;
+                speed = 2.5f;
                 break;
 
             default:

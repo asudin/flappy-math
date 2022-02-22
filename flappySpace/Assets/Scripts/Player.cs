@@ -4,7 +4,7 @@ public class Player : MonoBehaviour
 {
     [Header("Player Settings")]
     [SerializeField, Range(1, 10)] private float jumpVelocity = 4f;
-    [SerializeField, Range(1, 10)] private float speed = 2f;
+    [SerializeField, Range(1, 10)] private float speed = 1f;
 
     private Rigidbody2D rb;
 
@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     // Jump mechanic
     void Update()
     {
-        //transform.position += Vector3.right * speed * Time.deltaTime;
+        transform.position += Vector3.right * speed * Time.deltaTime;
 
         if (Input.GetMouseButton(0))
         {
@@ -35,6 +35,6 @@ public class Player : MonoBehaviour
     // show game over screen if player is outside of screen resolution
     void OnBecameInvisible()
     {
-        //GameManager.GameOver();
+        GameManager.GameOver();
     }
 }
