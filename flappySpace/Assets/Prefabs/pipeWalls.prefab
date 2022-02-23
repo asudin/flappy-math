@@ -135,7 +135,7 @@ MonoBehaviour:
   - {x: -3.91547, y: 13.902059, z: 0}
   m_ShapePathHash: -1566495781
   m_Mesh: {fileID: 0}
-  m_InstanceId: 19962
+  m_InstanceId: 45354
 --- !u!1 &1515210794039292041
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,7 +346,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4112886796057145251}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: 0, z: 0}
+  m_LocalPosition: {x: -5, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 4722313106333254381}
@@ -436,7 +436,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4722313106333254381}
-  - component: {fileID: 7589733781278276563}
+  - component: {fileID: 6625280875641134085}
   m_Layer: 0
   m_Name: pipeWalls
   m_TagString: pipewalls
@@ -461,7 +461,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7589733781278276563
+--- !u!114 &6625280875641134085
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -473,7 +473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e11485f106c9562429ffe4baecda9a59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 0.4
 --- !u!1 &5244036695099385941
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,7 +609,7 @@ MonoBehaviour:
   - {x: -3.8961484, y: 13.850236, z: 0}
   m_ShapePathHash: 1840545755
   m_Mesh: {fileID: 0}
-  m_InstanceId: 19960
+  m_InstanceId: 45352
 --- !u!1 &5747528459263411449
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,7 +778,7 @@ MonoBehaviour:
   - {x: -3.9334502, y: 5.9108562, z: 0}
   m_ShapePathHash: -306506002
   m_Mesh: {fileID: 0}
-  m_InstanceId: 19942
+  m_InstanceId: 45334
 --- !u!1 &7384083142278997143
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,8 +4,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [Header("Game Manager Settings")]
-    public GameObject DeathScreen;
-    public GameObject StartScreen;
+
+    public GameObject DeathScreen, StartScreen;
 
     void Start()
     {

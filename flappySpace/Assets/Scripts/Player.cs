@@ -3,8 +3,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [Header("Player Settings")]
-    [SerializeField, Range(1, 10)] private float jumpVelocity = 4f;
-    [SerializeField, Range(1, 10)] private float speed = 1f;
+    [SerializeField] private float jumpVelocity = 4f;
+    [SerializeField] private float speed = 0.5f;
 
     private Rigidbody2D rb;
 
@@ -35,6 +35,6 @@ public class Player : MonoBehaviour
     // show game over screen if player is outside of screen resolution
     void OnBecameInvisible()
     {
-        GameManager.GameOver();
+        //GameManager.GameOver();
     }
 }

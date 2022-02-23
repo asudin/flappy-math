@@ -27,6 +27,10 @@ public class MathProblem : MonoBehaviour
                 {
                     GetComponent<TextMesh>().text = "" + numberA + " - " + numberB;
                 }
+                else if (numberA == numberB)
+                {
+                    GetComponent<TextMesh>().text = "" + numberA + " - " + numberB;
+                }
                 break;
             default:
                 GetComponent<TextMesh>().text = "error";

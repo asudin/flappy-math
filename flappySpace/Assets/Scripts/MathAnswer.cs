@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class MathAnswer : MonoBehaviour
 {
-    [SerializeField] GameObject problem;
-    [SerializeField] GameObject answerFieldTop, answerFieldBot;
+    [SerializeField] GameObject problem, answerFieldTop, answerFieldBot;
 
     MathProblem answer;
 
