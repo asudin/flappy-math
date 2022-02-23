@@ -3,7 +3,7 @@ using UnityEngine;
 public class ParallexEffect : MonoBehaviour
 {
     private float length, startPos;
-    public GameObject camera;
+    public GameObject cam;
     [SerializeField] private float parallexEffect;
 
     void Start()
@@ -14,8 +14,8 @@ public class ParallexEffect : MonoBehaviour
 
     void FixedUpdate()
     {
-        float temporaryPosition = (camera.transform.position.x * (1 - parallexEffect));
-        float distance = (camera.transform.position.x * parallexEffect);
+        float temporaryPosition = (cam.transform.position.x * (1 - parallexEffect));
+        float distance = (cam.transform.position.x * parallexEffect);
 
         transform.position = new Vector3(startPos + distance, transform.position.y, transform.position.z);
 

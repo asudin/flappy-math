@@ -4,8 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [Header("Game Manager Settings")]
-
-    public GameObject DeathScreen, StartScreen;
+    public GameObject DeathScreen;
 
     void Start()
     {
@@ -16,12 +15,6 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         DeathScreen.SetActive(true);
-        Time.timeScale = 0;
-    }
-
-    public void MainMenu()
-    {
-        StartScreen.SetActive(true);
         Time.timeScale = 0;
     }
 

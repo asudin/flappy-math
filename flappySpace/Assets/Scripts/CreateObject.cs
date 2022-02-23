@@ -19,7 +19,7 @@ public class CreateObject : MonoBehaviour
         if (timer > spawnTime)
         {
             GameObject newobj = Instantiate(obj);
-            newobj.transform.position = transform.position + new Vector3(0, Random.Range(-spawnHeight, spawnHeight), Random.Range(22, 50));
+            newobj.transform.position = transform.position + new Vector3(10, Random.Range(-spawnHeight, spawnHeight), Random.Range(50, 60));
 
             transform.position += Vector3.left * speed * Time.deltaTime;
 

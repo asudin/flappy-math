@@ -35,7 +35,7 @@ public class PipeMove : MonoBehaviour
                 break;
 
             default:
-                speed = speed;
+                speed = 0.5f;
                 break;
         }
     }

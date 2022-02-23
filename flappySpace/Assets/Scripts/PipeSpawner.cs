@@ -27,23 +27,23 @@ public class PipeSpawner : MonoBehaviour
         switch (spawnTime)
         {
             case 50:
-                spawnTime = 7;
+                spawnTime = 7f;
                 break;
 
             case 110:
-                spawnTime = 6;
+                spawnTime = 6f;
                 break;
 
             case 160:
-                spawnTime = 7;
+                spawnTime = 7f;
                 break;
 
             case 220:
-                spawnTime = 5;
+                spawnTime = 5f;
                 break;
 
             default:
-                spawnTime = spawnTime;
+                spawnTime = 8.5f;
                 break;
         }
 
