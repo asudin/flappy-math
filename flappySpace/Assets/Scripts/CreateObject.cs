@@ -3,18 +3,18 @@ using UnityEngine;
 public class CreateObject : MonoBehaviour
 {
     [Header("Object Spawner Settings")]
-    [SerializeField] private float spawnTime = 4;
-    [SerializeField, Range(1,20)] private float spawnHeight = 14;
+    [SerializeField] private float spawnTime = 6.5f;
+    [SerializeField, Range(1,20)] private float spawnHeight = 14f;
 
     private float speed;
-    private float timer = 0;
+    private float timer = 0f;
 
     public GameObject obj;
 
     // spawns new pipe walls with minor differences in height position each time
     void Update()
     {
-        speed = Random.Range(0.1f, 0.6f);
+        speed = Random.Range(0.6f, 1f);
 
         if (timer > spawnTime)
         {

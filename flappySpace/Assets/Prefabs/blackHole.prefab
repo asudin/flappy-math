@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1537095894697263030}
   - component: {fileID: 1537095894697263024}
   - component: {fileID: 1537095894697263025}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SmallRings (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e635f1d4e9e95fb48bbfaf94c58bffb8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.101960786}
   m_FlipX: 0
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 1537095894703567087}
   - component: {fileID: 1537095894703567081}
   - component: {fileID: 1537095894703567086}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SmallRings (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e635f1d4e9e95fb48bbfaf94c58bffb8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.14901961}
   m_FlipX: 0
@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 1537095894822062297}
   - component: {fileID: 1537095894822062299}
   - component: {fileID: 1537095894822062296}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SmallRings (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 1537095894862293818}
   - component: {fileID: 1537095894862293796}
   - component: {fileID: 1537095894862293797}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SmallRings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -362,7 +362,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e635f1d4e9e95fb48bbfaf94c58bffb8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.5058824}
   m_FlipX: 0
@@ -399,7 +399,7 @@ GameObject:
   - component: {fileID: 1537095895030967621}
   - component: {fileID: 1537095895030967623}
   - component: {fileID: 1537095895030967620}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Rings (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -459,7 +459,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a346af70da5958a4390f1ddce263f067, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.3882353}
   m_FlipX: 0
@@ -496,7 +496,7 @@ GameObject:
   - component: {fileID: 1537095895105288360}
   - component: {fileID: 1537095895105288362}
   - component: {fileID: 1537095895105288363}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MediumRings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -556,7 +556,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a91fa3f89dd498343b7658d25e5a6ea0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.8}
   m_FlipX: 0
@@ -593,7 +593,7 @@ GameObject:
   - component: {fileID: 1537095895349454720}
   - component: {fileID: 1537095895349454722}
   - component: {fileID: 1537095895349454723}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SmallRings (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -653,7 +653,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e635f1d4e9e95fb48bbfaf94c58bffb8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.14901961}
   m_FlipX: 0
@@ -690,7 +690,7 @@ GameObject:
   - component: {fileID: 1537095895386286605}
   - component: {fileID: 1537095895386286607}
   - component: {fileID: 1537095895386286604}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Rings (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -750,7 +750,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a346af70da5958a4390f1ddce263f067, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.49411765}
   m_FlipX: 0
@@ -787,7 +787,7 @@ GameObject:
   - component: {fileID: 1537095895392417136}
   - component: {fileID: 1537095895392417138}
   - component: {fileID: 1537095895392417139}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Rings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -847,7 +847,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a346af70da5958a4390f1ddce263f067, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.3254902}
   m_FlipX: 0
@@ -884,7 +884,7 @@ GameObject:
   - component: {fileID: 1537095895727163894}
   - component: {fileID: 1537095895727163888}
   - component: {fileID: 1537095895727163889}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MediumRings (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -944,7 +944,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a91fa3f89dd498343b7658d25e5a6ea0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.8}
   m_FlipX: 0
@@ -979,7 +979,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1537095896410655952}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BlackHoleRings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1022,7 +1022,7 @@ GameObject:
   - component: {fileID: 1537095896506820844}
   - component: {fileID: 1537095896506820846}
   - component: {fileID: 1537095896506820847}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SmallRings (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1082,7 +1082,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e635f1d4e9e95fb48bbfaf94c58bffb8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.30588236}
   m_FlipX: 0
@@ -1118,7 +1118,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6856903123222786082}
   - component: {fileID: 8171617345611392325}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: blackHole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1199,7 +1199,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2035409819937018506}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BlackHole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
