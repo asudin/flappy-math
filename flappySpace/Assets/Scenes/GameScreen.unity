@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &165585583 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7223627344050507403, guid: e7b0d80f23a9bf640a79250503965f18, type: 3}
+  m_PrefabInstance: {fileID: 7223627345896778676}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &296494393
 GameObject:
   m_ObjectHideFlags: 0
@@ -1248,7 +1253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250740e4c2f8a734583776486066f088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathScreen: {fileID: 0}
+  deathScreen: {fileID: 165585583}
 --- !u!1 &1162339257
 GameObject:
   m_ObjectHideFlags: 0
@@ -1575,7 +1580,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _jumpVelocity: 3.2
   _speed: 0.5
-  gameManager: {fileID: 0}
+  effect: {fileID: 362960003672928134, guid: 985db7b9ed8842047ba739298a06dc0a, type: 3}
+  gameManager: {fileID: 1087937257}
 --- !u!58 &1414366038
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2717,7 +2723,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7223627344050507508, guid: e7b0d80f23a9bf640a79250503965f18, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7223627344050507508, guid: e7b0d80f23a9bf640a79250503965f18, type: 3}
       propertyPath: m_AnchorMax.x

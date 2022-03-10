@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    //public GameObject effect;
+    public GameObject effect;
     public GameManager gameManager;
 
     void Start()
@@ -29,17 +29,20 @@ public class Player : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             rb.velocity = Vector2.up * _jumpVelocity;
+            Instantiate(effect, transform.position, Quaternion.identity);
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         gameManager.GameOver();
+
+        Instantiate(effect, transform.position, Quaternion.identity);
     }
 
     // Game over screen when player outside of screen boundaries
     void OnBecameInvisible()
     {
-        //GameManager.GameOver();
+        //gameManager.GameOver();
     }
 }
