@@ -3,36 +3,41 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [Header("Player Settings")]
-    [SerializeField] private float jumpVelocity = 4f;
-    [SerializeField] private float speed = 0.5f;
+    [SerializeField] private float _jumpVelocity = 4f;
+    [SerializeField] private float _speed = 0.5f;
 
     private Rigidbody2D rb;
 
     //public GameObject effect;
-    public GameManager GameManager;
+    public GameManager gameManager;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Jump mechanic
     void Update()
     {
-        transform.position += Vector3.right * speed * Time.deltaTime;
+        PlayerMove();
+    }
+
+    // Player movement & jumping
+    void PlayerMove()
+    {
+        transform.position += Vector3.right * _speed * Time.deltaTime;
 
         if (Input.GetMouseButton(0))
         {
-            rb.velocity = Vector2.up * jumpVelocity;
+            rb.velocity = Vector2.up * _jumpVelocity;
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        GameManager.GameOver();
+        gameManager.GameOver();
     }
 
-    // show game over screen if player is outside of screen resolution
+    // Game over screen when player outside of screen boundaries
     void OnBecameInvisible()
     {
         //GameManager.GameOver();

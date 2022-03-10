@@ -2,35 +2,18 @@ using UnityEngine;
 
 public class RingsSpinner : MonoBehaviour
 {
-    [SerializeField] private float rotationSpeed;
-    //private float timer;
-    //private float timePassed = 8f;
-    //private float duration = 5f;
-    //private float startTime;
+    [SerializeField] private float _rotationSpeed;
 
     public SpriteRenderer sprite;
 
     private void Awake()
     {
-        rotationSpeed = Random.Range(1, 16);
-        //startTime = Time.time;
+        _rotationSpeed = Random.Range(1, 16);
     }
 
+    // Rotates the rings for UI aesthetics
     void Update()
     {
-        transform.Rotate(new Vector3(0, 0, rotationSpeed) * Time.deltaTime);
-        //Transparency();
+        transform.Rotate(new Vector3(0, 0, _rotationSpeed) * Time.deltaTime);
     }
-
-    //void Transparency()
-    //{
-    //    if (timer > timePassed)
-    //    {
-    //        float t = (Time.time - startTime) / duration;
-    //        sprite.color = new Color(1f, 1f, 1f, Mathf.SmoothStep(0.08f, 0.54f, t));
-
-    //        timer = 0;
-    //    }
-    //    timer += Time.deltaTime;
-    //}
 }

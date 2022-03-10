@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class AddScore : MonoBehaviour
 {
-    // adding score on collision
+    // Adding score on collision
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Score.score += 10;
+        Score._score += 10;
     }
 }

@@ -5,6 +5,7 @@ public class CameraFollow : MonoBehaviour
     public Transform player;
     private Vector3 offset = new Vector3(0, 0, 10);
 
+    // Camera follows the player position in space
     private void LateUpdate()
     {
         Vector3 position = transform.position;

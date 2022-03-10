@@ -8,6 +8,12 @@ public class MusicSounds : MonoBehaviour
 
     void Awake()
     {
+        MusicTheme();
+    }
+
+    // Continue playing music when changing scenes
+    void MusicTheme()
+    {
         if (backgroundMusic == null)
         {
             backgroundMusic = this;

@@ -2,30 +2,32 @@ using UnityEngine;
 
 public class ParallexEffect : MonoBehaviour
 {
-    private float length, startPos;
-    public GameObject cam;
     [SerializeField] private float parallexEffect;
+    private float _length, _startPos;
+
+    public GameObject cam;
 
     void Start()
     {
-        startPos = transform.position.x;
-        length = GetComponent<SpriteRenderer>().bounds.size.x;
+        _startPos = transform.position.x;
+        _length = GetComponent<SpriteRenderer>().bounds.size.x;
     }
 
+    // Creates background as the player moves through space
     void FixedUpdate()
     {
         float temporaryPosition = (cam.transform.position.x * (1 - parallexEffect));
         float distance = (cam.transform.position.x * parallexEffect);
 
-        transform.position = new Vector3(startPos + distance, transform.position.y, transform.position.z);
+        transform.position = new Vector3(_startPos + distance, transform.position.y, transform.position.z);
 
-        if (temporaryPosition > startPos + length)
+        if (temporaryPosition > _startPos + _length)
         {
-            startPos += length;
+            _startPos += _length;
         }
-        else if (temporaryPosition < startPos + length)
+        else if (temporaryPosition < _startPos + _length)
         {
-            startPos -= length;
+            _startPos -= _length;
         }
     }
 }

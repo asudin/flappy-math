@@ -3,33 +3,38 @@ using UnityEngine;
 public class CreateObject : MonoBehaviour
 {
     [Header("Object Spawner Settings")]
-    [SerializeField] private float spawnTime = 6.5f;
-    [SerializeField, Range(1,20)] private float spawnHeight = 14f;
+    [SerializeField] private float _spawnTime = 6.5f;
+    [SerializeField, Range(1,20)] private float _spawnHeight = 14f;
 
-    private float speed;
-    private float timer = 0f;
+    private float _speed;
+    private float _timer = 0f;
 
-    public GameObject obj;
+    public GameObject spawnObject;
 
-    // spawns new pipe walls with minor differences in height position each time
+    // Spawning new object with height differences for aesthetics
     void Update()
     {
-        speed = Random.Range(0.6f, 1f);
+        SpawnObject();
+    }
 
-        if (timer > spawnTime)
+    void SpawnObject()
+    {
+        _speed = Random.Range(0.6f, 1f);
+
+        if (_timer > _spawnTime)
         {
-            GameObject newobj = Instantiate(obj);
-            newobj.transform.position = transform.position + new Vector3(10, Random.Range(-spawnHeight, spawnHeight), Random.Range(50, 60));
+            GameObject newobj = Instantiate(spawnObject);
+            newobj.transform.position = transform.position + new Vector3(10, Random.Range(-_spawnHeight, _spawnHeight), Random.Range(50, 60));
 
-            transform.position += Vector3.left * speed * Time.deltaTime;
+            transform.position += Vector3.left * _speed * Time.deltaTime;
 
             Destroy(newobj, 60);
 
-            timer = 0;
+            _timer = 0;
 
-            spawnTime = 30;
+            _spawnTime = 30;
         }
 
-        timer += Time.deltaTime;
+        _timer += Time.deltaTime;
     }
 }

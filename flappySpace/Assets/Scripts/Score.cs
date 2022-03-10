@@ -4,16 +4,16 @@ using TMPro;
 public class Score : MonoBehaviour
 {
     [Header("Score Settings")]
-    public static int score = 0;
+    public static int _score = 0;
 
     void Start()
     {
-        score = 0;
+        _score = 0;
     }
 
-    // each time a player gets +1 score it changes it to sctring type 
+    // Passing score to input field
     void Update()
     {
-        GetComponent<TMP_Text>().text = score.ToString();
+        GetComponent<TMP_Text>().text = _score.ToString();
     }
 }

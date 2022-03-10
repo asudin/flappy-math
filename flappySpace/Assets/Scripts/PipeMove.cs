@@ -3,40 +3,40 @@ using UnityEngine;
 public class PipeMove : MonoBehaviour
 {
     [Header("Move Settings")]
-    public float speed = 0.5f;
+    public float _speed = 0.5f;
 
-    private float score = Score.score;
+    private float _score = Score._score;
 
     // moves the objects
     void Update()
     {
-        transform.position += Vector3.left * speed * Time.deltaTime;
+        transform.position += Vector3.left * _speed * Time.deltaTime;
 
-        switch (score)
+        IncreasedSpeed();
+    }
+
+    // Incrases pipe moving speed towards player for increased difficulty
+    void IncreasedSpeed()
+    {
+        if (_score > 40)
         {
-            case 40:
-                speed = 1f;
-                break;
-
-            case 80:
-                speed = 1.2f;
-                break;
-
-            case 110:
-                speed = 0.8f;
-                break;
-
-            case 160:
-                speed = 1.5f;
-                break;
-
-            case 220:
-                speed = 1.8f;
-                break;
-
-            default:
-                speed = 0.5f;
-                break;
+            _speed = 1f;
+        }
+        else if (_score > 80)
+        {
+            _speed = 1.2f;
+        }
+        else if (_score > 110)
+        {
+            _speed = 0.8f;
+        }
+        else if (_score > 160)
+        {
+            _speed = 1.5f;
+        }
+        else if (_score > 220)
+        {
+            _speed = 1.8f;
         }
     }
 }

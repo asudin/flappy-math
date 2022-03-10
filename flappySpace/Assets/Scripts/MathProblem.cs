@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MathProblem : MonoBehaviour
 {
-    private int numberA, numberB, equation, problem;
+    private int _numberA, _numberB, _equation, _problem;
 
     public void Start()
     {
@@ -13,57 +13,64 @@ public class MathProblem : MonoBehaviour
     // prints the equation problem before the wall objects
     public void PrintProblem()
     {
-        switch (equation)
+        switch (_equation)
         {
             case 1:
-                GetComponent<TextMesh>().text = "" + numberA + " + " + numberB;
+                GetComponent<TextMesh>().text = "" + _numberA + " + " + _numberB;
                 break;
+
             case 2:
-                if (numberA > numberB)
+                if (_numberA > _numberB)
                 {
-                    GetComponent<TextMesh>().text = "" + numberA + " - " + numberB;
+                    GetComponent<TextMesh>().text = "" + _numberA + " - " + _numberB;
                 }
-                else if (numberA < numberB)
+                else if (_numberA < _numberB)
                 {
-                    GetComponent<TextMesh>().text = "" + numberA + " - " + numberB;
+                    GetComponent<TextMesh>().text = "" + _numberA + " - " + _numberB;
                 }
-                else if (numberA == numberB)
+                else if (_numberA == _numberB)
                 {
-                    GetComponent<TextMesh>().text = "" + numberA + " - " + numberB;
+                    GetComponent<TextMesh>().text = "" + _numberA + " - " + _numberB;
                 }
                 break;
+
             default:
                 GetComponent<TextMesh>().text = "error";
                 break;
         }
     }
 
-    // randomly produces an equation 
+    // Randomly create a problem 
     public int GetProblem()
     {
-        Debug.Log($"this is the case number: {equation}");
-        switch (equation)
+        Debug.Log($"this is the case number: {_equation}");
+        switch (_equation)
         {
             case 1:
-                problem = numberA + numberB;
+                _problem = _numberA + _numberB;
                 break;
+
             case 2:
-                problem = numberA - numberB;
+                _problem = _numberA - _numberB;
                 break;
+
             default:
-                problem = numberA + numberB;
+                _problem = _numberA + _numberB;
                 break;
         }
-        Debug.Log($"this is the problem: {problem}");
-        return problem;
+
+        Debug.Log($"this is the problem: {_problem}");
+
+        return _problem;
     }
 
-    // randomizes the numbers
+    // Randomize numbers for problem creation
     public void GenerateRandomNumber()
     {
         Debug.Log($"our random numbers");
-        numberA = Random.Range(1, 20);
-        numberB = Random.Range(1, 20);
-        equation = Random.Range(1, 3);
+
+        _numberA = Random.Range(1, 20);
+        _numberB = Random.Range(1, 20);
+        _equation = Random.Range(1, 3);
     }
 }

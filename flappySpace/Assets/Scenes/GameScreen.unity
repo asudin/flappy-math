@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 296494396}
   - component: {fileID: 296494395}
   m_Layer: 0
-  m_Name: Game Elements
+  m_Name: GameElements
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -600,8 +600,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c5be55eee65daa46844fe64e153d5bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 963194225}
   parallexEffect: 0.85
+  cam: {fileID: 963194225}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1248,7 +1248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250740e4c2f8a734583776486066f088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DeathScreen: {fileID: 1913939263}
+  deathScreen: {fileID: 0}
 --- !u!1 &1162339257
 GameObject:
   m_ObjectHideFlags: 0
@@ -1345,8 +1345,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c5be55eee65daa46844fe64e153d5bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 963194225}
   parallexEffect: 0.2
+  cam: {fileID: 963194225}
 --- !u!1 &1169843950
 GameObject:
   m_ObjectHideFlags: 0
@@ -1423,8 +1423,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f8bb61afaf2d0246b2ce533d2648f97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnTime: 8.5
-  spawnHeight: 2
+  _spawnTime: 10
+  _spawnHeight: 2
   pipe: {fileID: 4140802436795389995, guid: 5e44f8e462182b24c961672aebb12fb6, type: 3}
 --- !u!1 &1232064808
 GameObject:
@@ -1522,8 +1522,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c5be55eee65daa46844fe64e153d5bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 963194225}
   parallexEffect: 0.35
+  cam: {fileID: 963194225}
 --- !u!1 &1414366035
 GameObject:
   m_ObjectHideFlags: 0
@@ -1573,9 +1573,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5916bc2b454b52f45a92fe8ce68ef26f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpVelocity: 4
-  speed: 1.2
-  GameManager: {fileID: 1087937257}
+  _jumpVelocity: 3.2
+  _speed: 0.5
+  gameManager: {fileID: 0}
 --- !u!58 &1414366038
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1676,8 +1676,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3408821d38ad08c4db18b97528cadf73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallMultiplier: 2.5
-  lowJumpMultiplier: 2
+  _fallMultiplier: 1.2
+  _lowJumpMultiplier: 2
 --- !u!96 &1414366042
 TrailRenderer:
   serializedVersion: 2
@@ -1917,8 +1917,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c5be55eee65daa46844fe64e153d5bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 963194225}
   parallexEffect: 0.7
+  cam: {fileID: 963194225}
 --- !u!1 &1525214969
 GameObject:
   m_ObjectHideFlags: 0
@@ -1962,9 +1962,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f96eabbcb5d83143b906dc5b7159416, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnTime: 4
-  spawnHeight: 14
-  obj: {fileID: 6783425531709162836, guid: ca138c8e3ca9c9e46aae085b2f9ae8f7, type: 3}
+  _spawnTime: 6.5
+  _spawnHeight: 14
+  spawnObject: {fileID: 6783425531709162836, guid: ca138c8e3ca9c9e46aae085b2f9ae8f7, type: 3}
 --- !u!1 &1614841499
 GameObject:
   m_ObjectHideFlags: 0
@@ -2307,8 +2307,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c5be55eee65daa46844fe64e153d5bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 963194225}
   parallexEffect: 1
+  cam: {fileID: 963194225}
 --- !u!1 &1835538812
 GameObject:
   m_ObjectHideFlags: 0
@@ -2322,7 +2322,7 @@ GameObject:
   - component: {fileID: 1835538815}
   - component: {fileID: 1835538814}
   m_Layer: 0
-  m_Name: Score Canvas
+  m_Name: CanvasCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2445,11 +2445,6 @@ Transform:
   m_Father: {fileID: 1085246483}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1913939263 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7223627344050507403, guid: e7b0d80f23a9bf640a79250503965f18, type: 3}
-  m_PrefabInstance: {fileID: 7223627345896778676}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1913939264 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7223627344050507508, guid: e7b0d80f23a9bf640a79250503965f18, type: 3}
@@ -2551,8 +2546,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c5be55eee65daa46844fe64e153d5bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 963194225}
   parallexEffect: 0.55
+  cam: {fileID: 963194225}
 --- !u!1 &2095827052
 GameObject:
   m_ObjectHideFlags: 0

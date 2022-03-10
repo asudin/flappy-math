@@ -4,17 +4,16 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [Header("Game Manager Settings")]
-    public GameObject DeathScreen;
+    public GameObject deathScreen;
 
     void Start()
     {
         Time.timeScale = 1;
     }
 
-    // Update is called once per frame
     public void GameOver()
     {
-        DeathScreen.SetActive(true);
+        deathScreen.SetActive(true);
         Time.timeScale = 0;
     }
 
