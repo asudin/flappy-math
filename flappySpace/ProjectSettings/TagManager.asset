@@ -9,6 +9,7 @@ TagManager:
   - gamemanager
   - botAnswer
   - topAnswer
+  - blackhole
   layers:
   - Default
   - TransparentFX

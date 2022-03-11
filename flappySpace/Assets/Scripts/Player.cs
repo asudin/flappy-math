@@ -7,13 +7,15 @@ public class Player : MonoBehaviour
     [SerializeField] private float _speed = 0.5f;
 
     private Rigidbody2D rb;
+    private ParticleSystem jumpEffect;
 
-    public GameObject effect;
     public GameManager gameManager;
+    public AudioSource jumpSound;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        jumpEffect = GetComponentInChildren<ParticleSystem>();
     }
 
     void Update()
@@ -29,20 +31,22 @@ public class Player : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             rb.velocity = Vector2.up * _jumpVelocity;
-            Instantiate(effect, transform.position, Quaternion.identity);
+            
+            // Adding particle jump & sound effects
+            jumpEffect.Play();
+            jumpSound.Play();
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         gameManager.GameOver();
-
-        Instantiate(effect, transform.position, Quaternion.identity);
+        jumpEffect.Play();
     }
 
     // Game over screen when player outside of screen boundaries
     void OnBecameInvisible()
     {
-        //gameManager.GameOver();
+        gameManager.GameOver();
     }
 }

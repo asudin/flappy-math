@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dd4a571d7470e546bfcd0036a03bb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 0
+  _rotationSpeed: 0
   sprite: {fileID: 1537095894697263024}
 --- !u!1 &1537095894703567084
 GameObject:
@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dd4a571d7470e546bfcd0036a03bb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 0
+  _rotationSpeed: 0
   sprite: {fileID: 1537095894703567081}
 --- !u!1 &1537095894822062302
 GameObject:
@@ -289,7 +289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dd4a571d7470e546bfcd0036a03bb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 0
+  _rotationSpeed: 0
   sprite: {fileID: 1537095894822062299}
 --- !u!1 &1537095894862293819
 GameObject:
@@ -386,7 +386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dd4a571d7470e546bfcd0036a03bb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 0
+  _rotationSpeed: 0
   sprite: {fileID: 1537095894862293796}
 --- !u!1 &1537095895030967642
 GameObject:
@@ -483,7 +483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dd4a571d7470e546bfcd0036a03bb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 0
+  _rotationSpeed: 0
   sprite: {fileID: 1537095895030967623}
 --- !u!1 &1537095895105288361
 GameObject:
@@ -580,7 +580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dd4a571d7470e546bfcd0036a03bb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 0
+  _rotationSpeed: 0
   sprite: {fileID: 1537095895105288362}
 --- !u!1 &1537095895349454721
 GameObject:
@@ -677,7 +677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dd4a571d7470e546bfcd0036a03bb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 0
+  _rotationSpeed: 0
   sprite: {fileID: 1537095895349454722}
 --- !u!1 &1537095895386286594
 GameObject:
@@ -774,7 +774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dd4a571d7470e546bfcd0036a03bb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 0
+  _rotationSpeed: 0
   sprite: {fileID: 1537095895386286607}
 --- !u!1 &1537095895392417137
 GameObject:
@@ -871,7 +871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dd4a571d7470e546bfcd0036a03bb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 0
+  _rotationSpeed: 0
   sprite: {fileID: 1537095895392417138}
 --- !u!1 &1537095895727163895
 GameObject:
@@ -968,7 +968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dd4a571d7470e546bfcd0036a03bb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 0
+  _rotationSpeed: 0
   sprite: {fileID: 1537095895727163888}
 --- !u!1 &1537095896410655953
 GameObject:
@@ -1106,7 +1106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dd4a571d7470e546bfcd0036a03bb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 0
+  _rotationSpeed: 0
   sprite: {fileID: 1537095896506820846}
 --- !u!1 &4313748164611001491
 GameObject:
@@ -1199,9 +1199,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2035409819937018506}
+  - component: {fileID: 9095737182021544884}
   m_Layer: 5
-  m_Name: BlackHole
-  m_TagString: Untagged
+  m_Name: blackHole
+  m_TagString: blackhole
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1222,3 +1223,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9095737182021544884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6783425531709162836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e11485f106c9562429ffe4baecda9a59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 0.5

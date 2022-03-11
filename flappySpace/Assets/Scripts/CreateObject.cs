@@ -19,7 +19,7 @@ public class CreateObject : MonoBehaviour
 
     void SpawnObject()
     {
-        _speed = Random.Range(0.6f, 1f);
+        _speed = Random.Range(1f, 2f);
 
         if (_timer > _spawnTime)
         {
