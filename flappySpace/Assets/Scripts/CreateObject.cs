@@ -19,7 +19,7 @@ public class CreateObject : MonoBehaviour
 
     void SpawnObject()
     {
-        _speed = Random.Range(1f, 2f);
+        _speed = Random.Range(1.2f, 2.2f);
 
         if (_timer > _spawnTime)
         {
@@ -28,7 +28,7 @@ public class CreateObject : MonoBehaviour
 
             transform.position += Vector3.left * _speed * Time.deltaTime;
 
-            Destroy(newobj, 60);
+            Destroy(newobj, 180);
 
             _timer = 0;
 
