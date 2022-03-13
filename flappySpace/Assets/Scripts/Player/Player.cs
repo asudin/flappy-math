@@ -14,15 +14,12 @@ public class Player : MonoBehaviour
     private ParticleSystem jumpEffect;
 
     [Header("Game settings")]
-    public GameManager gameManager;
-    public TimeManager timeManager;
+    public GameManager gameManager; 
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         jumpEffect = GetComponentInChildren<ParticleSystem>();
-
-        
     }
 
     void Update()

@@ -7,7 +7,21 @@ public class GameManager : MonoBehaviour
     [Header("Game Manager Settings")]
     public GameObject deathScreen;
 
+    public static GameManager instance;
+
     private float _slowdownFactor = 0.2f;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void Start()
     {
