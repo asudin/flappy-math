@@ -1,10 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
     [Header("Game Manager Settings")]
     public GameObject deathScreen;
+
+    private float _slowdownFactor = 0.2f;
 
     void Start()
     {
@@ -13,8 +16,18 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        StartCoroutine(DelayedGameOver());
+    }
+
+    // Slow downed animation playing while game over screen shows on
+    IEnumerator DelayedGameOver()
+    {
+        Time.timeScale = _slowdownFactor;
+
         deathScreen.SetActive(true);
-        Time.timeScale = 0;
+        yield return new WaitForSecondsRealtime(1.5f);
+
+        Time.timeScale = 0f;
     }
 
     public void Replay()

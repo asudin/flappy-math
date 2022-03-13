@@ -6,7 +6,7 @@ public class PlayOnClick : MonoBehaviour
     [SerializeField] private AudioClip _clip;
 
     // Making sure the coroutine will be executed only once
-    bool soundPlayed = false;
+    private bool _soundPlayed = false;
 
     private void Update()
     {
@@ -17,10 +17,10 @@ public class PlayOnClick : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            if (!soundPlayed)
+            if (!_soundPlayed)
             {
                 StartCoroutine(DelaySound());
-                soundPlayed = true;
+                _soundPlayed = true;
             }
         }
     }
