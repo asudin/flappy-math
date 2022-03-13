@@ -28,11 +28,11 @@ public class CreateObject : MonoBehaviour
 
             transform.position += Vector3.left * _speed * Time.deltaTime;
 
-            Destroy(newobj, 180);
+            Destroy(newobj, 360f);
 
             _timer = 0;
 
-            _spawnTime = 30;
+            _spawnTime = 120f;
         }
 
         _timer += Time.deltaTime;
