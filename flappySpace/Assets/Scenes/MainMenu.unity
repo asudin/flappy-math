@@ -1770,7 +1770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250740e4c2f8a734583776486066f088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathScreen: {fileID: 1132530507}
+  DeathScreen: {fileID: 1132530507}
 --- !u!4 &1769232942
 Transform:
   m_ObjectHideFlags: 0
@@ -1792,6 +1792,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1469961479}
     m_Modifications:
+    - target: {fileID: 2122899677415040782, guid: e7b0d80f23a9bf640a79250503965f18, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1769232941}
+    - target: {fileID: 2122899677415040782, guid: e7b0d80f23a9bf640a79250503965f18, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
     - target: {fileID: 7223627344050507403, guid: e7b0d80f23a9bf640a79250503965f18, type: 3}
       propertyPath: m_Name
       value: Death Screen

@@ -18,22 +18,9 @@ public class MathProblem : MonoBehaviour
             case 1:
                 GetComponent<TextMesh>().text = "" + _numberA + " + " + _numberB;
                 break;
-
             case 2:
-                if (_numberA > _numberB)
-                {
-                    GetComponent<TextMesh>().text = "" + _numberA + " - " + _numberB;
-                }
-                else if (_numberA < _numberB)
-                {
-                    GetComponent<TextMesh>().text = "" + _numberA + " - " + _numberB;
-                }
-                else if (_numberA == _numberB)
-                {
-                    GetComponent<TextMesh>().text = "" + _numberA + " - " + _numberB;
-                }
+                GetComponent<TextMesh>().text = "" + _numberA + " - " + _numberB;
                 break;
-
             default:
                 GetComponent<TextMesh>().text = "error";
                 break;
@@ -58,9 +45,7 @@ public class MathProblem : MonoBehaviour
                 _problem = _numberA + _numberB;
                 break;
         }
-
         Debug.Log($"this is the problem: {_problem}");
-
         return _problem;
     }
 

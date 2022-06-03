@@ -2,17 +2,17 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform player;
-    private Vector3 offset = new Vector3(0, 0, 10);
+    public Transform Player;
+    private Vector3 _offset = new Vector3(0, 0, 10);
 
     private void LateUpdate()
     {
         // If the player hasn't been destroyed
-        if (player != null)
+        if (Player != null)
         {
             // Camera follows the player
             Vector3 position = transform.position;
-            position.x = (player.position + offset).x;
+            position.x = (Player.position + _offset).x;
             transform.position = position;
         }
     }

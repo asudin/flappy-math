@@ -1,25 +1,24 @@
 using UnityEngine;
-using System.Collections;
 
 public class Player : MonoBehaviour
 {
     [Header("Player Settings")]
+    public AudioSource JumpSound;
+    public GameObject DeathEffect;
+
+    private Rigidbody2D _rigidBody;
+    private ParticleSystem _jumpEffect;
+
     [SerializeField] private float _jumpVelocity = 4f;
     [SerializeField] private float _speed = 0.5f;
 
-    public AudioSource jumpSound;
-    public GameObject deathEffect;
-
-    private Rigidbody2D rb;
-    private ParticleSystem jumpEffect;
-
     [Header("Game settings")]
-    public GameManager gameManager; 
+    public GameManager GameManager; 
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        jumpEffect = GetComponentInChildren<ParticleSystem>();
+        _rigidBody = GetComponent<Rigidbody2D>();
+        _jumpEffect = GetComponentInChildren<ParticleSystem>();
     }
 
     void Update()
@@ -27,35 +26,31 @@ public class Player : MonoBehaviour
         PlayerMove();
     }
 
-    // Player movement & jumping
     void PlayerMove()
     {
         transform.position += Vector3.right * _speed * Time.deltaTime;
 
         if (Input.GetMouseButton(0))
         {
-            rb.velocity = Vector2.up * _jumpVelocity;
+            _rigidBody.velocity = Vector2.up * _jumpVelocity;
 
             // Adding particle jump & sound effects
-            jumpEffect.Play();
-            jumpSound.Play();
+            _jumpEffect.Play();
+            JumpSound.Play();
         }
     }
 
-    // Showing death screen on player collision with walls
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        gameManager.GameOver();
+        GameManager.GameOver();
 
-        // Destroy the player and shows off dead particles
-        Instantiate(deathEffect, transform.position, Quaternion.identity);
+        Instantiate(DeathEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 
-    // Game over screen when player outside of screen boundaries
     void OnBecameInvisible()
     {
-        gameManager.GameOver();
+        GameManager.GameOver();
         Destroy(gameObject);
     }
 }

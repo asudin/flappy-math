@@ -6,7 +6,14 @@ public class MathAnswer : MonoBehaviour
 
     MathProblem answer;
 
-    private int _solution, _answerHolder, _answerDif, _subDiv, _wrongAnswer;
+    private int _solution;
+    private int _answerHolder;
+    private int _answerDifferentiator;
+    private int _correctAnswerField;
+    private int _wrongAnswer;
+    private int _minNumberRange = 1;
+    private int _middleNumberRange = 3;
+    private int _maxNumberRange = 5;
 
     private void Awake()
     {
@@ -20,14 +27,6 @@ public class MathAnswer : MonoBehaviour
         AnswerHolder();
     }
 
-    // Randomizes numbers for answer fields
-    private void RandomAnswer()
-    {
-        _answerHolder = Random.Range(1, 3);
-        _answerDif = Random.Range(1, 3);
-        _subDiv = Random.Range(1, 5);
-    }
-
     public void AnswerHolder()
     {
         _wrongAnswer = _solution;
@@ -37,190 +36,113 @@ public class MathAnswer : MonoBehaviour
         {
             // In this case the right answer always spawns at the top opening
             case 1:
-                Debug.Log($"answerDiv case1 is: {_subDiv}");
+                Debug.Log($"answerDiv case1 is: {_correctAnswerField}");
 
-                // Using a randomized number in order to add/subtract from the wrong answer field
-                switch (_subDiv)
+                // Using a randomized number to create wrong answers for user to lose upon collision
+                switch (_correctAnswerField)
                 {
                     case 1:
-                        answerFieldTop.GetComponent<TextMesh>().text = _solution.ToString();
-
-                        _wrongAnswer = _solution + _answerDif;
-
-                        answerFieldBot.GetComponent<TextMesh>().text = _wrongAnswer.ToString();
-                        answerFieldBot.GetComponent<Collider2D>().isTrigger = false;
-
-                        Debug.Log($"BINGO: {_solution}");
+                        ShowTopAnswerAddition();
                         break;
-
                     case 2:
-                        answerFieldTop.GetComponent<TextMesh>().text = _solution.ToString();
-
-                        _wrongAnswer = _solution - _answerDif;
-
-                        answerFieldBot.GetComponent<TextMesh>().text = _wrongAnswer.ToString();
-                        answerFieldBot.GetComponent<Collider2D>().isTrigger = false;
-
-                        Debug.Log($"BINGO: {_solution}");
+                        ShowTopAnswerDivision();
                         break;
-
-                    case 3:
-                        answerFieldTop.GetComponent<TextMesh>().text = _solution.ToString();
-
-                        _wrongAnswer = _solution + _answerDif;
-
-                        answerFieldBot.GetComponent<TextMesh>().text = _wrongAnswer.ToString();
-                        answerFieldBot.GetComponent<Collider2D>().isTrigger = false;
-
-                        Debug.Log($"BINGO: {_solution}");
-                        break;
-
-                    case 4:
-                        answerFieldTop.GetComponent<TextMesh>().text = _solution.ToString();
-
-                        _wrongAnswer = _solution - _answerDif;
-
-                        answerFieldBot.GetComponent<TextMesh>().text = _wrongAnswer.ToString();
-                        answerFieldBot.GetComponent<Collider2D>().isTrigger = false;
-
-                        Debug.Log($"BINGO: {_solution}");
-                        break;
-
                     default:
-                        answerFieldTop.GetComponent<TextMesh>().text = _solution.ToString();
-
-                        _wrongAnswer = _solution - _answerDif;
-
-                        answerFieldBot.GetComponent<TextMesh>().text = _wrongAnswer.ToString();
-                        answerFieldBot.GetComponent<Collider2D>().isTrigger = false;
-
-                        Debug.Log($"BINGO: {_solution}");
+                        ShowTopAnswerDivision();
                         break;
                 }
                 break;
 
             // In this case the right answer always spawns at the bot opening
             case 2:
-                Debug.Log($"answerDiv case2 is: {_subDiv}");
+                Debug.Log($"answerDiv case2 is: {_correctAnswerField}");
 
                 // Using a randomized number in order to add/subtract from the wrong answer field
-                switch (_subDiv)
+                switch (_correctAnswerField)
                 {
                     case 1:
-                        _wrongAnswer = _solution + _answerDif;
-                        answerFieldTop.GetComponent<TextMesh>().text = _wrongAnswer.ToString();
-                        answerFieldTop.GetComponent<Collider2D>().isTrigger = false;
-
-                        answerFieldBot.GetComponent<TextMesh>().text = _solution.ToString();
-
-                        Debug.Log($"BINGO: {_solution}");
+                        ShowBotAnswerAddition();
                         break;
-
                     case 2:
-                        _wrongAnswer = _solution - _answerDif;
-                        answerFieldTop.GetComponent<TextMesh>().text = _wrongAnswer.ToString();
-                        answerFieldTop.GetComponent<Collider2D>().isTrigger = false;
-
-                        answerFieldBot.GetComponent<TextMesh>().text = _solution.ToString();
-
-                        Debug.Log($"BINGO: {_solution}");
+                        ShowBotAnswerDivision();
                         break;
-
-                    case 3:
-                        _wrongAnswer = _solution - _answerDif;
-                        answerFieldTop.GetComponent<TextMesh>().text = _wrongAnswer.ToString();
-
-
-                        answerFieldBot.GetComponent<TextMesh>().text = _solution.ToString();
-
-                        Debug.Log($"BINGO: {_solution}");
-                        break;
-
-                    case 4:
-                        _wrongAnswer = _solution - _answerDif;
-                        answerFieldTop.GetComponent<TextMesh>().text = _wrongAnswer.ToString();
-                        answerFieldTop.GetComponent<Collider2D>().isTrigger = false;
-
-                        answerFieldBot.GetComponent<TextMesh>().text = _solution.ToString();
-
-                        Debug.Log($"BINGO: {_solution}");
-                        break;
-
                     default:
-                        _wrongAnswer = _solution - _answerDif;
-                        answerFieldTop.GetComponent<TextMesh>().text = _wrongAnswer.ToString();
-                        answerFieldTop.GetComponent<Collider2D>().isTrigger = false;
-
-                        answerFieldBot.GetComponent<TextMesh>().text = _solution.ToString();
-
-                        Debug.Log($"BINGO: {_solution}");
+                        ShowBotAnswerAddition();
                         break;
                 }
                 break;
 
             // The default script to spawn the right answer at the top
             default:
-                Debug.Log($"answerDiv default is: {_subDiv}");
+                Debug.Log($"answerDiv default is: {_correctAnswerField}");
 
                 // Using a randomized number in order to add/subtract from the wrong answer field
-                switch (_subDiv)
+                switch (_correctAnswerField)
                 {
                     case 1:
-                        answerFieldTop.GetComponent<TextMesh>().text = _solution.ToString();
-
-                        _wrongAnswer = _solution + _answerDif;
-
-                        answerFieldBot.GetComponent<TextMesh>().text = _wrongAnswer.ToString();
-                        answerFieldBot.GetComponent<Collider2D>().isTrigger = false;
-
-                        Debug.Log($"BINGO: {_solution}");
+                        ShowTopAnswerAddition();
                         break;
-
                     case 2:
-                        answerFieldTop.GetComponent<TextMesh>().text = _solution.ToString();
-
-                        _wrongAnswer = _solution - _answerDif;
-
-                        answerFieldBot.GetComponent<TextMesh>().text = _wrongAnswer.ToString();
-                        answerFieldBot.GetComponent<Collider2D>().isTrigger = false;
-
-                        Debug.Log($"BINGO: {_solution}");
+                        ShowTopAnswerDivision();
                         break;
-
-                    case 3:
-                        answerFieldTop.GetComponent<TextMesh>().text = _solution.ToString();
-
-                        _wrongAnswer = _solution + _answerDif;
-
-                        answerFieldBot.GetComponent<TextMesh>().text = _wrongAnswer.ToString();
-                        answerFieldBot.GetComponent<Collider2D>().isTrigger = false;
-
-                        Debug.Log($"BINGO: {_solution}");
-                        break;
-
-                    case 4:
-                        answerFieldTop.GetComponent<TextMesh>().text = _solution.ToString();
-
-                        _wrongAnswer = _solution - _answerDif;
-
-                        answerFieldBot.GetComponent<TextMesh>().text = _wrongAnswer.ToString();
-                        answerFieldBot.GetComponent<Collider2D>().isTrigger = false;
-
-                        Debug.Log($"BINGO: {_solution}");
-                        break;
-
                     default:
-                        answerFieldTop.GetComponent<TextMesh>().text = _solution.ToString();
-
-                        _wrongAnswer = _solution - _answerDif;
-
-                        answerFieldBot.GetComponent<TextMesh>().text = _wrongAnswer.ToString();
-                        answerFieldBot.GetComponent<Collider2D>().isTrigger = false;
-
-                        Debug.Log($"BINGO: {_solution}");
+                        ShowTopAnswerDivision();
                         break;
                 }
                 break;
         }
+    }
+
+    private void RandomAnswer()
+    {
+        _answerHolder = Random.Range(_minNumberRange, _middleNumberRange);
+        _answerDifferentiator = Random.Range(_minNumberRange, _middleNumberRange);
+        _correctAnswerField = Random.Range(_minNumberRange, _maxNumberRange);
+    }
+
+    private void ShowTopAnswerAddition()
+    {
+        answerFieldTop.GetComponent<TextMesh>().text = _solution.ToString();
+
+        _wrongAnswer = _solution + _answerDifferentiator;
+
+        answerFieldBot.GetComponent<TextMesh>().text = _wrongAnswer.ToString();
+        answerFieldBot.GetComponent<Collider2D>().isTrigger = false;
+
+        Debug.Log($"BINGO: {_solution}");
+    }
+
+    private void ShowTopAnswerDivision()
+    {
+        answerFieldTop.GetComponent<TextMesh>().text = _solution.ToString();
+
+        _wrongAnswer = _solution - _answerDifferentiator;
+
+        answerFieldBot.GetComponent<TextMesh>().text = _wrongAnswer.ToString();
+        answerFieldBot.GetComponent<Collider2D>().isTrigger = false;
+
+        Debug.Log($"BINGO: {_solution}");
+    }
+
+    private void ShowBotAnswerAddition()
+    {
+        _wrongAnswer = _solution + _answerDifferentiator;
+        answerFieldTop.GetComponent<TextMesh>().text = _wrongAnswer.ToString();
+        answerFieldTop.GetComponent<Collider2D>().isTrigger = false;
+
+        answerFieldBot.GetComponent<TextMesh>().text = _solution.ToString();
+
+        Debug.Log($"BINGO: {_solution}");
+    }
+
+    private void ShowBotAnswerDivision()
+    {
+        _wrongAnswer = _solution - _answerDifferentiator;
+        answerFieldTop.GetComponent<TextMesh>().text = _wrongAnswer.ToString();
+        answerFieldTop.GetComponent<Collider2D>().isTrigger = false;
+
+        answerFieldBot.GetComponent<TextMesh>().text = _solution.ToString();
+
+        Debug.Log($"BINGO: {_solution}");
     }
 }

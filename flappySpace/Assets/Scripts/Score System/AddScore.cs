@@ -9,7 +9,7 @@ public class AddScore : MonoBehaviour
     {
         _sucessPing = GetComponent<AudioSource>();
     }
-    // Adding score on collision
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Score._score += 10;

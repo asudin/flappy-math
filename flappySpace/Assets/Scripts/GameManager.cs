@@ -5,25 +5,22 @@ using System.Collections;
 public class GameManager : MonoBehaviour
 {
     [Header("Game Manager Settings")]
-    public GameObject deathScreen;
+    public GameObject DeathScreen;
 
-    public static GameManager instance;
+    public static GameManager Instance;
 
     private float _slowdownFactor = 0.2f;
 
     private void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
+        if ((Instance == null) == false)
         {
             Destroy(gameObject);
         }
+        Instance = this;
     }
 
-    void Start()
+    private void Start()
     {
         Time.timeScale = 1;
     }
@@ -31,17 +28,6 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         StartCoroutine(DelayedGameOver());
-    }
-
-    // Slow downed animation playing while game over screen shows on
-    IEnumerator DelayedGameOver()
-    {
-        Time.timeScale = _slowdownFactor;
-
-        deathScreen.SetActive(true);
-        yield return new WaitForSecondsRealtime(1.5f);
-
-        Time.timeScale = 0f;
     }
 
     public void Replay()
@@ -57,5 +43,15 @@ public class GameManager : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    IEnumerator DelayedGameOver()
+    {
+        Time.timeScale = _slowdownFactor;
+
+        DeathScreen.SetActive(true);
+        yield return new WaitForSecondsRealtime(1.5f);
+
+        Time.timeScale = 0f;
     }
 }
