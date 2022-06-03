@@ -11,20 +11,6 @@ public class SoundManager : MonoBehaviour
         BackgroundMusic();
     }
 
-    void BackgroundMusic()
-    {
-        // Continue playing sounds when changing scenes
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-
     public void PlaySound(AudioClip clip)
     {
         _effectsSource.PlayOneShot(clip);
@@ -38,5 +24,16 @@ public class SoundManager : MonoBehaviour
     public void ToggleEffects()
     {
         _effectsSource.mute = !_effectsSource.mute;
+    }
+
+    private void BackgroundMusic()
+    {
+        // Continue playing sounds when changing scenes
+        if ((Instance == null) == false)
+        {
+            Destroy(gameObject);
+        }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 }

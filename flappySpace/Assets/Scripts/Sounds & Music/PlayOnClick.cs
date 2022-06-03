@@ -13,7 +13,7 @@ public class PlayOnClick : MonoBehaviour
         PlayClickSound();
     }
 
-    void PlayClickSound()
+    private void PlayClickSound()
     {
         if (Input.GetMouseButton(0))
         {

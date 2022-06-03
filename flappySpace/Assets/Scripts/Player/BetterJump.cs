@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class BetterJump : MonoBehaviour
 {
+    Rigidbody2D RigidBody;
+
     [SerializeField] private float _fallMultiplier = 1.2f;
     [SerializeField] private float _lowJumpMultiplier = 2f;
 
-    Rigidbody2D rb;
-
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        RigidBody = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
@@ -17,16 +17,15 @@ public class BetterJump : MonoBehaviour
         SmoothJump();
     }
 
-    // Smoothing the player jump mechanic
-    void SmoothJump()
+     private void SmoothJump()
     {
-        if (rb.velocity.y < 0)
+        if (RigidBody.velocity.y < 0)
         {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (_fallMultiplier - 1) * Time.deltaTime;
+            RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (_fallMultiplier - 1) * Time.deltaTime;
         }
-        else if (rb.velocity.y > 0 && !Input.GetMouseButtonDown(0))
+        else if (RigidBody.velocity.y > 0 && !Input.GetMouseButtonDown(0))
         {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (_lowJumpMultiplier - 1) * Time.deltaTime;
+            RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (_lowJumpMultiplier - 1) * Time.deltaTime;
         }
     }
 }
